@@ -1,0 +1,38 @@
+# This file is used to define the services that will be used in the application.
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  api:
+    build: ./api
+    container_name: api_container
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/test-users
+
+  client:
+    build: ./client
+    container_name: client_container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./client:/app
+      - /client/node_modules
+
+volumes:
+  mongo_data:
