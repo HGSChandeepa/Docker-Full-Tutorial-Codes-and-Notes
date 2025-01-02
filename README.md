@@ -2,6 +2,8 @@
 
 ## 🔗Full Note: https://docs.google.com/document/d/129Dto4erhN7RO4ZS_ROCmgsJfwgb5CUXACVNkKeQQa8/edit?usp=sharing
 
+## 🧪Tutorial: https://youtu.be/qtKK7qOGMuE?si=OclWCzs1B8bO5j0V
+
 Welcome to the Docker Tutorials and Projects repository! This repository contains code and resources related to a comprehensive Docker tutorial video. The video covers all the essential areas you need to know before using Docker, including hands-on projects to solidify your understanding.
 
 ## Table of Contents
